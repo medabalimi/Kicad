@@ -37,11 +37,12 @@ LIBS:onsemi
 LIBS:motor_drivers
 LIBS:DRV8825
 LIBS:motordriver
+LIBS:USBCNC-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -51,4 +52,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L DRV8825 U?
+U 1 1 55A0FB70
+P 3800 2200
+F 0 "U?" H 3600 2850 60  0000 C CNN
+F 1 "DRV8825" H 3750 2100 60  0000 C CNN
+F 2 "" H 3800 2200 60  0000 C CNN
+F 3 "" H 3800 2200 60  0000 C CNN
+	1    3800 2200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

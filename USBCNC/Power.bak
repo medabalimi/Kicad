@@ -37,6 +37,7 @@ LIBS:onsemi
 LIBS:motor_drivers
 LIBS:DRV8825
 LIBS:motordriver
+LIBS:USBCNC-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
