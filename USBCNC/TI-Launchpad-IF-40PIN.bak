@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:USBCNC-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -53,9 +54,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Ti_Booster_40_J1 JLP1
+L Ti_Booster_40_J1-RESCUE-USBCNC JLP1
 U 1 1 559E3E8F
 P 2450 2750
+AR Path="/559E3E8F" Ref="JLP1"  Part="1" 
+AR Path="/559E3E7E/559E3E8F" Ref="JLP1"  Part="1" 
 F 0 "JLP1" H 2400 3400 60  0000 C CNN
 F 1 "Ti_Booster_40_J1" H 2450 2100 60  0000 C CNN
 F 2 "" H 2450 2750 60  0000 C CNN
@@ -64,7 +67,7 @@ F 3 "" H 2450 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Ti_Booster_40_J2 JLP2
+L Ti_Booster_40_J2-RESCUE-USBCNC JLP2
 U 1 1 559E3EEE
 P 5650 2750
 F 0 "JLP2" H 5600 3400 60  0000 C CNN
@@ -75,7 +78,7 @@ F 3 "" H 5650 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Ti_Booster_40_J3 JLP3
+L Ti_Booster_40_J3-RESCUE-USBCNC JLP3
 U 1 1 559E3F8D
 P 2400 4550
 F 0 "JLP3" H 2350 5200 60  0000 C CNN
@@ -86,7 +89,7 @@ F 3 "" H 2400 4550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Ti_Booster_40_J4 JLP4
+L Ti_Booster_40_J4-RESCUE-USBCNC JLP4
 U 1 1 559E403A
 P 5650 4550
 F 0 "JLP4" H 5600 5200 60  0000 C CNN
@@ -125,7 +128,7 @@ Text GLabel 1100 4700 0    60   Output ~ 0
 M4_DIR
 Text GLabel 1100 4800 0    60   Output ~ 0
 M4_ENABLE
-Text GLabel 4900 4800 0    60   Output ~ 0
+Text GLabel 4900 4700 0    60   Output ~ 0
 M2_STEP
 Text GLabel 1650 4900 0    60   Output ~ 0
 M2_DIR
@@ -145,7 +148,7 @@ Text GLabel 4900 4600 0    60   Input ~ 0
 M2-MIN
 Text GLabel 4900 4500 0    60   Input ~ 0
 M2-MAX
-Text GLabel 4300 4400 0    60   Input ~ 0
+Text GLabel 4350 4400 0    60   Input ~ 0
 M3-MIN
 Text GLabel 1600 3000 0    60   Input ~ 0
 M3-MAX
@@ -174,13 +177,9 @@ Wire Wire Line
 Wire Wire Line
 	1800 5000 1650 5000
 Wire Wire Line
-	4300 4400 5050 4400
-Wire Wire Line
 	5050 4500 4900 4500
 Wire Wire Line
 	4900 4600 5050 4600
-Wire Wire Line
-	4900 4800 5050 4800
 Wire Wire Line
 	5050 3100 4300 3100
 Wire Wire Line
@@ -190,7 +189,7 @@ Wire Wire Line
 Wire Wire Line
 	5050 2400 4300 2400
 Text GLabel 1050 2400 0    60   Output ~ 0
-S_CS
+~SS
 Wire Wire Line
 	1850 2300 1750 2300
 Wire Wire Line
@@ -221,4 +220,20 @@ Wire Wire Line
 	5050 3200 4300 3200
 Wire Wire Line
 	1800 4100 1750 4100
+Text GLabel 1050 3100 0    60   BiDi ~ 0
+SCL
+Text GLabel 1050 3200 0    60   BiDi ~ 0
+SDA
+Wire Wire Line
+	1850 3100 1050 3100
+Wire Wire Line
+	1050 3200 1850 3200
+Wire Wire Line
+	5050 4400 4350 4400
+Wire Wire Line
+	5050 4700 4900 4700
+Text GLabel 4400 4900 0    60   Output ~ 0
+UART_TX
+Text GLabel 4400 4800 0    60   Input ~ 0
+UART_RX
 $EndSCHEMATC
