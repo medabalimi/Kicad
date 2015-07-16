@@ -103,13 +103,11 @@ Text GLabel 1750 2150 1    60   Output ~ 0
 VCC
 Text GLabel 1050 2900 0    60   Output ~ 0
 SCLK
-Text GLabel 1750 3900 1    60   Output ~ 0
-5V
 $Comp
-L GND #PWR?
+L GND #PWR01
 U 1 1 55A2A931
 P 1100 4200
-F 0 "#PWR?" H 1100 3950 50  0001 C CNN
+F 0 "#PWR01" H 1100 3950 50  0001 C CNN
 F 1 "GND" H 1100 4050 50  0000 C CNN
 F 2 "" H 1100 4200 60  0000 C CNN
 F 3 "" H 1100 4200 60  0000 C CNN
@@ -159,8 +157,6 @@ Wire Wire Line
 Wire Wire Line
 	1800 4200 1100 4200
 Wire Wire Line
-	1750 4100 1750 3900
-Wire Wire Line
 	1650 4300 1800 4300
 Wire Wire Line
 	1800 4400 1650 4400
@@ -191,8 +187,6 @@ Wire Wire Line
 Text GLabel 1050 2400 0    60   Output ~ 0
 ~SS
 Wire Wire Line
-	1850 2300 1750 2300
-Wire Wire Line
 	1750 2300 1750 2150
 Wire Wire Line
 	1850 2400 1050 2400
@@ -218,8 +212,6 @@ Wire Wire Line
 	1850 2700 1650 2700
 Wire Wire Line
 	5050 3200 4300 3200
-Wire Wire Line
-	1800 4100 1750 4100
 Text GLabel 1050 3100 0    60   BiDi ~ 0
 SCL
 Text GLabel 1050 3200 0    60   BiDi ~ 0
@@ -236,4 +228,137 @@ Text GLabel 4400 4900 0    60   Output ~ 0
 UART_TX
 Text GLabel 4400 4800 0    60   Input ~ 0
 UART_RX
+NoConn ~ 1850 2800
+NoConn ~ 5050 2600
+NoConn ~ 5050 2700
+NoConn ~ 5050 4100
+NoConn ~ 5050 4200
+NoConn ~ 5050 4300
+Wire Wire Line
+	5050 4800 4400 4800
+Wire Wire Line
+	5050 4900 4400 4900
+NoConn ~ 5050 5000
+Wire Wire Line
+	1850 2300 1750 2300
+NoConn ~ 1800 4100
+$Comp
+L CONN_01X08 P11
+U 1 1 55A7FFAF
+P 9300 2900
+F 0 "P11" H 9300 3350 50  0000 C CNN
+F 1 "CONN_01X08" V 9400 2900 50  0000 C CNN
+F 2 "" H 9300 2900 60  0000 C CNN
+F 3 "" H 9300 2900 60  0000 C CNN
+	1    9300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 55A8025C
+P 4850 2150
+F 0 "#PWR02" H 4850 1900 50  0001 C CNN
+F 1 "GND" H 4850 2000 50  0000 C CNN
+F 2 "" H 4850 2150 60  0000 C CNN
+F 3 "" H 4850 2150 60  0000 C CNN
+	1    4850 2150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2300 5000 2100
+Wire Wire Line
+	5000 2100 4850 2100
+Wire Wire Line
+	4850 2100 4850 2150
+Text GLabel 8850 2750 0    60   Input ~ 0
+MOSI
+Text GLabel 8850 2850 0    60   Output ~ 0
+MISO
+Text GLabel 8850 2650 0    60   Input ~ 0
+SCLK
+Text GLabel 8850 2550 0    60   Input ~ 0
+~SS
+Text GLabel 8850 2950 0    60   BiDi ~ 0
+SCL
+Text GLabel 8850 3050 0    60   BiDi ~ 0
+SDA
+Wire Wire Line
+	9100 2550 8850 2550
+Wire Wire Line
+	9100 2650 8850 2650
+Wire Wire Line
+	9100 2750 8850 2750
+Wire Wire Line
+	9100 3050 8850 3050
+Wire Wire Line
+	9100 2850 8850 2850
+Wire Wire Line
+	9100 2950 8850 2950
+Wire Wire Line
+	5050 2300 5000 2300
+Text GLabel 8850 3250 0    60   Input ~ 0
+UART_TX
+Text GLabel 8850 3150 0    60   Output ~ 0
+UART_RX
+Wire Wire Line
+	9100 3150 8850 3150
+Wire Wire Line
+	9100 3250 8850 3250
+$Comp
+L CONN_02X04 P20
+U 1 1 55A81992
+P 9200 3900
+F 0 "P20" H 9200 4150 50  0000 C CNN
+F 1 "CONN_02X04" H 9200 3650 50  0000 C CNN
+F 2 "" H 9200 2700 60  0000 C CNN
+F 3 "" H 9200 2700 60  0000 C CNN
+	1    9200 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 9600 3750 2    60   Output ~ 0
+3v3
+Wire Wire Line
+	9450 3750 9600 3750
+Text GLabel 8650 3750 0    60   Input ~ 0
+VCC
+Wire Wire Line
+	8950 3750 8650 3750
+Wire Wire Line
+	8950 4050 8900 4050
+Wire Wire Line
+	8900 3950 8900 4200
+Wire Wire Line
+	8900 4200 9500 4200
+Wire Wire Line
+	9500 4200 9500 3950
+Wire Wire Line
+	9500 4050 9450 4050
+$Comp
+L GND #PWR03
+U 1 1 55A81E90
+P 9200 4250
+F 0 "#PWR03" H 9200 4000 50  0001 C CNN
+F 1 "GND" H 9200 4100 50  0000 C CNN
+F 2 "" H 9200 4250 60  0000 C CNN
+F 3 "" H 9200 4250 60  0000 C CNN
+	1    9200 4250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 4250 9200 4200
+Connection ~ 9200 4200
+Text GLabel 9600 3850 2    60   Input ~ 0
+3v3
+Wire Wire Line
+	9600 3850 9450 3850
+Wire Wire Line
+	8650 3850 8950 3850
+Wire Wire Line
+	9500 3950 9450 3950
+Connection ~ 9500 4050
+Wire Wire Line
+	8950 3950 8900 3950
+Connection ~ 8900 4050
+Text GLabel 8650 3850 0    60   Output ~ 0
+VCC
 $EndSCHEMATC
