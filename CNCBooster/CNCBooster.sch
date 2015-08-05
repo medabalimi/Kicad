@@ -923,4 +923,10 @@ Wire Wire Line
 	5900 1800 5750 1800
 Wire Wire Line
 	5900 1900 5750 1900
+Text GLabel 7900 4800 0    60   Output ~ 0
+M4_DIR
+Text GLabel 7900 4900 0    60   Output ~ 0
+M4_STEP
+Text GLabel 7900 5000 0    60   Output ~ 0
+M4_~ENABLE
 $EndSCHEMATC
